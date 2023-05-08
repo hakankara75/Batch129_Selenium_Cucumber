@@ -19,13 +19,13 @@ public class TechproStepDefinition {
     @And("arama_kutusunda_QA_aratir")
     public void arama_kutusunda_qa_aratir() {
         techproPage=new TechproPage();
-        techproPage.searchBox.sendKeys("qa", Keys.ENTER);
+        techproPage.searchBox.sendKeys("QA", Keys.ENTER);
 
     }
 
     @And("sayfa_basliginin_qa_icerdigini_test_eder")
     public void sayfa_basliginin_qa_icerdigini_test_eder() {
-        Assert.assertTrue(Driver.getDriver().getTitle().contains("qa"));
+        Assert.assertTrue(Driver.getDriver().getTitle().contains("QA"));
     }
 
     @Then("cikan_reklam_kapatilir")
