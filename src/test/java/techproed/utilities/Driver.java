@@ -55,6 +55,11 @@ public class Driver {
     }
 
     public static void closeDriver() {
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         if (driver != null) {//Driver'a değer atanmışşsa
             driver.close();
             driver = null;

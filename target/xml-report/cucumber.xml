@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="5.67" tests="1" skipped="0" failures="1" errors="0">
+<testcase classname="Data Table Test" name="BlueRentalCar Login" time="5.462">
+<failure type="java.lang.AssertionError">
+<![CDATA[java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at techproed.stepDefinitions.BlueRentalCarStepDefinitions.kullanici_blue_rental_car_sayfasina_gider(BlueRentalCarStepDefinitions.java:22)
+	at ✽.kullanici blue rental car sayfasina gider(file:///C:/Users/HakanBatirhan/IdeaProjects/Batch129Cucumber/src/test/resources/features/day33_DataTable_Hooks/datatable_test.feature:26)
+]]>
+</failure>
+<system-out><![CDATA[
+Given kullanici blue rental car sayfasina gider.............................failed
+When login olur map.........................................................skipped
+Then sayfayi_kapatir........................................................skipped
+]]></system-out>
+</testcase>
+</testsuite>

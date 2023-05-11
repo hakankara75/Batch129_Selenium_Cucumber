@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="54.577" tests="4" skipped="0" failures="0" errors="0">
+    <testcase classname="Medunna Oda Oluşturma    #1"
+              name="Oda Olusturma    #3      #bu loop ozelligi verir. tum basamaklarda ayni islemleri tekrar eder - #4 - Example #1.1"
+              time="17.579">
+        <system-out><![CDATA[
+Given "https://medunna.com/" adresine git...................................passed
+When kullanici simgesini tikla..............................................passed
+And sign in secenegini tikla................................................passed
+And usarname kutusuna "mark_twain" gir......................................passed
+And password kutusuna "Mark.123" gir........................................passed
+And remember me radio butonunu tikla........................................passed
+And sign in butonunu tikla..................................................passed
+When items&titles sekmesini tikla...........................................passed
+And room secenegini tikla...................................................passed
+And create a new room botonunu tikla........................................passed
+And room number kutusuna "2015341" gir......................................passed
+And room type drop downdan "DELUXE" sec.....................................passed
+And price kutusuna "10" gir.................................................passed
+And description kutusuna "Balkonlu oda" gir.................................passed
+And save butonunu tikla.....................................................passed
+Then kaydedildi alertini dogrula............................................passed
+And sayfayi_kapatir.........................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Medunna Oda Oluşturma    #1"
+              name="Oda Olusturma    #3      #bu loop ozelligi verir. tum basamaklarda ayni islemleri tekrar eder - #4 - Example #1.2"
+              time="10.205">
+        <system-out><![CDATA[
+Given "https://medunna.com/" adresine git...................................passed
+When kullanici simgesini tikla..............................................passed
+And sign in secenegini tikla................................................passed
+And usarname kutusuna "mark_twain" gir......................................passed
+And password kutusuna "Mark.123" gir........................................passed
+And remember me radio butonunu tikla........................................passed
+And sign in butonunu tikla..................................................passed
+When items&titles sekmesini tikla...........................................passed
+And room secenegini tikla...................................................passed
+And create a new room botonunu tikla........................................passed
+And room number kutusuna "3415027" gir......................................passed
+And room type drop downdan "SUITE" sec......................................passed
+And price kutusuna "20" gir.................................................passed
+And description kutusuna "Temiz oda" gir....................................passed
+And save butonunu tikla.....................................................passed
+Then kaydedildi alertini dogrula............................................passed
+And sayfayi_kapatir.........................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Medunna Oda Oluşturma    #1"
+              name="Oda Olusturma    #3      #bu loop ozelligi verir. tum basamaklarda ayni islemleri tekrar eder - #4 - Example #1.3"
+              time="11.162">
+        <system-out><![CDATA[
+Given "https://medunna.com/" adresine git...................................passed
+When kullanici simgesini tikla..............................................passed
+And sign in secenegini tikla................................................passed
+And usarname kutusuna "mark_twain" gir......................................passed
+And password kutusuna "Mark.123" gir........................................passed
+And remember me radio butonunu tikla........................................passed
+And sign in butonunu tikla..................................................passed
+When items&titles sekmesini tikla...........................................passed
+And room secenegini tikla...................................................passed
+And create a new room botonunu tikla........................................passed
+And room number kutusuna "4605751" gir......................................passed
+And room type drop downdan "TWIN" sec.......................................passed
+And price kutusuna "11" gir.................................................passed
+And description kutusuna "Manzarali oda" gir................................passed
+And save butonunu tikla.....................................................passed
+Then kaydedildi alertini dogrula............................................passed
+And sayfayi_kapatir.........................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Medunna Oda Oluşturma    #1"
+              name="Oda Olusturma    #3      #bu loop ozelligi verir. tum basamaklarda ayni islemleri tekrar eder - #4 - Example #1.4"
+              time="15.389">
+        <system-out><![CDATA[
+Given "https://medunna.com/" adresine git...................................passed
+When kullanici simgesini tikla..............................................passed
+And sign in secenegini tikla................................................passed
+And usarname kutusuna "mark_twain" gir......................................passed
+And password kutusuna "Mark.123" gir........................................passed
+And remember me radio butonunu tikla........................................passed
+And sign in butonunu tikla..................................................passed
+When items&titles sekmesini tikla...........................................passed
+And room secenegini tikla...................................................passed
+And create a new room botonunu tikla........................................passed
+And room number kutusuna "9204681" gir......................................passed
+And room type drop downdan "DAYCARE" sec....................................passed
+And price kutusuna "45" gir.................................................passed
+And description kutusuna "Tertemiz oda" gir.................................passed
+And save butonunu tikla.....................................................passed
+Then kaydedildi alertini dogrula............................................passed
+And sayfayi_kapatir.........................................................passed
+]]></system-out>
+    </testcase>
+</testsuite>
