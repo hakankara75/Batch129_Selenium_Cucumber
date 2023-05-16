@@ -38,7 +38,7 @@ public class TechproStepDefinition {
 
     @Given("kullanici_{string}_sayfasina_gider")
     public void kullanici__sayfasina_gider(String arg0) {
-        Driver.getDriver().get(ConfigReader.getProperty("techproed_Url"));
+        Driver.getDriver().get(ConfigReader.getProperty("amazon_Url"));
     }
 
     @And("kullanici {int} saniye bekler")

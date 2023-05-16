@@ -1,23 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="9.733" tests="1" skipped="0" failures="1" errors="0">
-<testcase classname="US002_TechProEducation_Testi_Hooks" name="TC01_TechProEducation_Sayfasi_Testi" time="9.53">
+<testsuite name="Cucumber" time="26.041" tests="5" skipped="0" failures="5" errors="0">
+<testcase classname="US003_Amazon_Testi" name="TC01_Amazonda_Urun_Aratma" time="9.956">
 <failure type="java.lang.AssertionError">
 <![CDATA[java.lang.AssertionError
 	at org.junit.Assert.fail(Assert.java:87)
 	at org.junit.Assert.assertTrue(Assert.java:42)
 	at org.junit.Assert.assertTrue(Assert.java:53)
-	at techproed.stepDefinitions.TechproStepDefinition.sayfa_basliginin__icerdigini_test_eder(TechproStepDefinition.java:57)
-	at ✽.sayfa_basliginin_"QA"_icerdigini_test_eder(file:///C:/Users/HakanBatirhan/IdeaProjects/Batch129Cucumber/src/test/resources/features/day34_DataTables_Hooks/US002_Hooks.feature:8)
+	at techproed.stepDefinitions.AmazonStepDefinition.basliginIcerdiginiDogrular(AmazonStepDefinition.java:54)
+	at ✽.basligin "Java" icerdigini dogrular(file:///C:/Users/HakanBatirhan/IdeaProjects/Batch129Cucumber/src/test/resources/features/day35_Excel_Rerun/US003_Rerun.feature:7)
 ]]>
 </failure>
 <system-out><![CDATA[
-Given kullanici_"techproed_Url"_sayfasina_gider.............................passed
-And cikan_reklam_kapatilir..................................................passed
-And kullanici 2 saniye bekler...............................................passed
-And searchBoxda_"developer"_aratir..........................................passed
-And sayfa_basliginin_"QA"_icerdigini_test_eder..............................failed
-When kullanici_tum_sayfanin_resmini_alir....................................skipped
-And sayfayi_kapatir.........................................................skipped
+Given kullanici_"amazon_Url"_sayfasina_gider................................passed
+And arama_kutusunda_iphone_aratir...........................................passed
+And basligin "Java" icerdigini dogrular.....................................failed
+]]></system-out>
+</testcase>
+<testcase classname="US003_Amazon_Testi" name="TC02_Amazonda_Urun_Aratma" time="4.131">
+<failure type="java.lang.AssertionError">
+<![CDATA[java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at techproed.stepDefinitions.AmazonStepDefinition.basliginIcerdiginiDogrular(AmazonStepDefinition.java:54)
+	at ✽.basligin "samsung" icerdigini dogrular(file:///C:/Users/HakanBatirhan/IdeaProjects/Batch129Cucumber/src/test/resources/features/day35_Excel_Rerun/US003_Rerun.feature:12)
+]]>
+</failure>
+<system-out><![CDATA[
+Given kullanici_"amazon_Url"_sayfasina_gider................................passed
+And arama_kutusunda_"samsung"_aratir........................................passed
+And basligin "samsung" icerdigini dogrular..................................failed
+]]></system-out>
+</testcase>
+<testcase classname="US003_Amazon_Testi" name="TC03_Amazonda_Urun_Aratma" time="3.384">
+<failure type="java.lang.AssertionError">
+<![CDATA[java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at techproed.stepDefinitions.AmazonStepDefinition.basliginIcerdiginiDogrular(AmazonStepDefinition.java:54)
+	at ✽.basligin "samsung" icerdigini dogrular(file:///C:/Users/HakanBatirhan/IdeaProjects/Batch129Cucumber/src/test/resources/features/day35_Excel_Rerun/US003_Rerun.feature:17)
+]]>
+</failure>
+<system-out><![CDATA[
+Given kullanici_"amazon_Url"_sayfasina_gider................................passed
+And arama_kutusunda_"nokia"_aratir..........................................passed
+And basligin "samsung" icerdigini dogrular..................................failed
+]]></system-out>
+</testcase>
+<testcase classname="US003_Amazon_Testi" name="TC04_Amazonda_Urun_Aratma" time="4.425">
+<failure type="java.lang.AssertionError">
+<![CDATA[java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at techproed.stepDefinitions.AmazonStepDefinition.basliginIcerdiginiDogrular(AmazonStepDefinition.java:54)
+	at ✽.basligin "samsung" icerdigini dogrular(file:///C:/Users/HakanBatirhan/IdeaProjects/Batch129Cucumber/src/test/resources/features/day35_Excel_Rerun/US003_Rerun.feature:22)
+]]>
+</failure>
+<system-out><![CDATA[
+Given kullanici_"amazon_Url"_sayfasina_gider................................passed
+And arama_kutusunda_"motorola"_aratir.......................................passed
+And basligin "samsung" icerdigini dogrular..................................failed
+]]></system-out>
+</testcase>
+<testcase classname="US003_Amazon_Testi" name="TC05_Amazonda_Urun_Aratma" time="3.705">
+<failure type="java.lang.AssertionError">
+<![CDATA[java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at techproed.stepDefinitions.AmazonStepDefinition.basliginIcerdiginiDogrular(AmazonStepDefinition.java:54)
+	at ✽.basligin "motorola" icerdigini dogrular(file:///C:/Users/HakanBatirhan/IdeaProjects/Batch129Cucumber/src/test/resources/features/day35_Excel_Rerun/US003_Rerun.feature:27)
+]]>
+</failure>
+<system-out><![CDATA[
+Given kullanici_"amazon_Url"_sayfasina_gider................................passed
+And arama_kutusunda_"motorola"_aratir.......................................passed
+And basligin "motorola" icerdigini dogrular.................................failed
 ]]></system-out>
 </testcase>
 </testsuite>

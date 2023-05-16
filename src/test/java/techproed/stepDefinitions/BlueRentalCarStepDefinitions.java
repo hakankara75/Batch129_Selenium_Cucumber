@@ -1,13 +1,16 @@
 package techproed.stepDefinitions;
 
 import io.cucumber.datatable.DataTable;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import techproed.pages.BlueRentalCarPage;
 import techproed.utilities.ConfigReader;
 import techproed.utilities.Driver;
+import techproed.utilities.ExcelUtils;
 import techproed.utilities.ReusableMethods;
 
 import java.util.List;
@@ -94,5 +97,34 @@ public class BlueRentalCarStepDefinitions {
 
         }
 
+    }
+
+    @And("kullanici_exceldeki_{string}sayfasindaki_kullanici_bilgileri_ile_login_olur")
+    public void kullanici_exceldeki_Sayfasindaki_kullanici_bilgileri_ile_login_olur(String sayfaAdi) {
+
+        ExcelUtils excelUtils=new ExcelUtils("src/test/resources/mysmoketestdata.xlsx", sayfaAdi);
+        for (int i = 1; i <=excelUtils.rowCount(); i++) {
+            String email=excelUtils.getCellData(i,0);
+            String password=excelUtils.getCellData(i,1);
+            blueRentalCarPage.loginButonu.click();
+            ReusableMethods.bekle(2);
+            blueRentalCarPage.emailBox.sendKeys(email, Keys.TAB, password, Keys.ENTER);
+            blueRentalCarPage.dropDown.click();
+            ReusableMethods.bekle(2);
+            blueRentalCarPage.profile.click();
+            ReusableMethods.bekle(2);
+            Assert.assertEquals(blueRentalCarPage.verifyEmail.getText(),email);
+            ReusableMethods.bekle(2);
+            blueRentalCarPage.dropDown.click();
+            blueRentalCarPage.logOut.click();
+            blueRentalCarPage.ok.click();
+
+        }
+        Driver.closeDriver();
+    }
+
+    @Given("kullanici_blueRentACarUrl_sayfasina_gider_exceldeki_verilerle_login_olur")
+    public void kullanici_bluerentacarurl_sayfasina_gider_exceldeki_verilerle_login_olur() {
+        System.out.println("BlueRentalPage Sayfasına Gidildi Exceldeki Veriler ile login olundu");
     }
 }

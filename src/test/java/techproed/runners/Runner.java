@@ -16,13 +16,13 @@ senaryoyu çalıştırabiliriz
                         "pretty", //console renkli yazdirmak icin
                         "html:src/test/resources/features/htmlReport/cucumberHooks.html",
                         "json:src/test/resources/features/htmlReport/cucumber.json",
-                        "junit:src/test/resources/features/htmlReport/cucumber.xml"
-                },
+                        "junit:src/test/resources/features/htmlReport/cucumber.xml",
+                        "rerun:TestOutput/failed_scenario.txt"}, //rerun hata veren testleri kaydedip yeniden otomatik kosmak icin
               //  monochrome = true, //console okunakli hale getirir, renksiz yapar
                 features = "src/test/resources/features",
                  glue = {"techproed/stepDefinitions"},//Bu parametre ile kodlarımızı yazdığımız stepDefinition
                                                      //class'ının packege'ını belirtiriz
-                 tags = "@hooks",
+                 tags = "@rerun",
                  dryRun = false                               )
 /*
 features ===> features'ların olduğu packega'ın yolunu ver(ContentRoot)

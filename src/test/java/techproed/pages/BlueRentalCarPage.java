@@ -24,4 +24,9 @@ public class BlueRentalCarPage {
     public WebElement logOut;
     @FindBy (xpath = "//button[.='OK']")
     public WebElement ok;
+    @FindBy (xpath = "//a[text()='Profile']")
+    public WebElement profile;
+    @FindBy (xpath = "//em")
+    public WebElement verifyEmail;
+
 }
