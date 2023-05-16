@@ -14,15 +14,15 @@ senaryoyu çalıştırabiliriz
 @CucumberOptions(  //plugin kismi raporlar icin
                 plugin = {
                         "pretty", //console renkli yazdirmak icin
-                        "html:target/default-cucumber-reports.html",
-                        "json:target/json-reports/cucumber.json",
-                        "junit:target/xml-report/cucumber.xml"
+                        "html:src/test/resources/features/htmlReport/cucumberHooks.html",
+                        "json:src/test/resources/features/htmlReport/cucumber.json",
+                        "junit:src/test/resources/features/htmlReport/cucumber.xml"
                 },
               //  monochrome = true, //console okunakli hale getirir, renksiz yapar
-                features = "src/test/resources/features/",
-                 glue = {"techproed/stepDefinitions", "techproed/hooks"},//Bu parametre ile kodlarımızı yazdığımız stepDefinition
+                features = "src/test/resources/features",
+                 glue = {"techproed/stepDefinitions"},//Bu parametre ile kodlarımızı yazdığımız stepDefinition
                                                      //class'ının packege'ını belirtiriz
-                 tags = "@BlueRentalCarDataTableMap",
+                 tags = "@hooks",
                  dryRun = false                               )
 /*
 features ===> features'ların olduğu packega'ın yolunu ver(ContentRoot)

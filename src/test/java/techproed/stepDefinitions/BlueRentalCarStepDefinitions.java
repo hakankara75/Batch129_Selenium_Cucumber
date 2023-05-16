@@ -2,10 +2,13 @@ package techproed.stepDefinitions;
 
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.Keys;
 import techproed.pages.BlueRentalCarPage;
 import techproed.utilities.ConfigReader;
 import techproed.utilities.Driver;
+import techproed.utilities.ReusableMethods;
 
 import java.util.List;
 import java.util.Map;
@@ -64,6 +67,32 @@ public class BlueRentalCarStepDefinitions {
 
         }
 
+
+    }
+
+    @Then("Verilen_kullanicilar_ile_login_olunur")
+    public void verilen_kullanicilar_ile_login_olunur(DataTable data) {
+        blueRentalCarPage=new BlueRentalCarPage();
+
+
+
+        System.out.println(data.asMaps());//map'lerden olusan bir list olusturur.
+        //[{email=sam.walker@bluerentalcars.com, password=c!fas_art}, {email=kate.brown@bluerentalcars.com, password=tad1$Fas}]
+        /*
+        feature file'daki olusturmus oldugumuz tabloyu map olarak listeler.
+       basligi key olarak alir, altindaki verileri value olarak alir
+       */
+
+        for (Map<String, String> element:data.asMaps()) {
+            blueRentalCarPage.loginButonu.click();
+            blueRentalCarPage.emailBox.sendKeys(element.get("email"), Keys.TAB, element.get("password"), Keys.ENTER);
+            ReusableMethods.bekle(3);
+            blueRentalCarPage.dropDown.click();
+            blueRentalCarPage.logOut.click();
+            ReusableMethods.bekle(3);
+            blueRentalCarPage.ok.click();
+
+        }
 
     }
 }
