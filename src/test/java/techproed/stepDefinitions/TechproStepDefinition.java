@@ -38,7 +38,7 @@ public class TechproStepDefinition {
 
     @Given("kullanici_{string}_sayfasina_gider")
     public void kullanici__sayfasina_gider(String arg0) {
-        Driver.getDriver().get(ConfigReader.getProperty("amazon_Url"));
+        Driver.getDriver().get(ConfigReader.getProperty("techproed_Url"));
     }
 
     @And("kullanici {int} saniye bekler")
@@ -49,7 +49,7 @@ public class TechproStepDefinition {
     @And("searchBoxda_{string}_aratir")
     public void searchboxda__aratir(String arg0) {
         techproPage=new TechproPage();
-        techproPage.searchBox.sendKeys("developer", Keys.ENTER);
+        techproPage.searchBox.sendKeys("python", Keys.ENTER);
     }
 
     @And("sayfa_basliginin_{string}_icerdigini_test_eder")
@@ -60,5 +60,12 @@ public class TechproStepDefinition {
     @When("kullanici_tum_sayfanin_resmini_alir")
     public void kullanici_tum_sayfanin_resmini_alir() {
         ReusableMethods.tumSayfaScreenShoot();
+    }
+
+
+    @And("searchBoxda_{string}_arattirir")
+    public void searchboxda__arattirir(String arg0) {
+        techproPage=new TechproPage();
+        techproPage.searchBox.sendKeys("qa", Keys.ENTER);
     }
 }

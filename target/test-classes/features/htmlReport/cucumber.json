@@ -1,1 +1,97 @@
-[{"line":2,"elements":[{"start_timestamp":"2023-05-16T20:13:12.322Z","line":4,"name":"TC01_Amazonda_Urun_Aratma","description":"","id":"us003-amazon-testi;tc01-amazonda-urun-aratma","type":"scenario","keyword":"Scenario","steps":[{"result":{"duration":5364620600,"status":"passed"},"line":5,"name":"kullanici_\"amazon_Url\"_sayfasina_gider","match":{"arguments":[{"val":"\"amazon_Url\"","offset":10}],"location":"techproed.stepDefinitions.TechproStepDefinition.kullanici__sayfasina_gider(java.lang.String)"},"keyword":"Given "},{"result":{"duration":4135830200,"status":"passed"},"line":6,"name":"arama_kutusunda_iphone_aratir","match":{"location":"techproed.stepDefinitions.AmazonStepDefinition.arama_kutusunda_iphone_aratir()"},"keyword":"And "},{"result":{"error_message":"java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat org.junit.Assert.assertTrue(Assert.java:53)\r\n\tat techproed.stepDefinitions.AmazonStepDefinition.basliginIcerdiginiDogrular(AmazonStepDefinition.java:54)\r\n\tat ✽.basligin \"Java\" icerdigini dogrular(file:///C:/Users/HakanBatirhan/IdeaProjects/Batch129Cucumber/src/test/resources/features/day35_Excel_Rerun/US003_Rerun.feature:7)\r\n","duration":28247600,"status":"failed"},"line":7,"name":"basligin \"Java\" icerdigini dogrular","match":{"arguments":[{"val":"\"Java\"","offset":9}],"location":"techproed.stepDefinitions.AmazonStepDefinition.basliginIcerdiginiDogrular(java.lang.String)"},"keyword":"And "}],"tags":[{"name":"@rerun"}]},{"start_timestamp":"2023-05-16T20:13:21.931Z","line":9,"name":"TC02_Amazonda_Urun_Aratma","description":"","id":"us003-amazon-testi;tc02-amazonda-urun-aratma","type":"scenario","keyword":"Scenario","steps":[{"result":{"duration":982926700,"status":"passed"},"line":10,"name":"kullanici_\"amazon_Url\"_sayfasina_gider","match":{"arguments":[{"val":"\"amazon_Url\"","offset":10}],"location":"techproed.stepDefinitions.TechproStepDefinition.kullanici__sayfasina_gider(java.lang.String)"},"keyword":"Given "},{"result":{"duration":2753092500,"status":"passed"},"line":11,"name":"arama_kutusunda_\"samsung\"_aratir","match":{"arguments":[{"val":"\"samsung\"","offset":16}],"location":"techproed.stepDefinitions.AmazonStepDefinition.arama_kutusunda__aratir(java.lang.String)"},"keyword":"And "},{"result":{"error_message":"java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat org.junit.Assert.assertTrue(Assert.java:53)\r\n\tat techproed.stepDefinitions.AmazonStepDefinition.basliginIcerdiginiDogrular(AmazonStepDefinition.java:54)\r\n\tat ✽.basligin \"samsung\" icerdigini dogrular(file:///C:/Users/HakanBatirhan/IdeaProjects/Batch129Cucumber/src/test/resources/features/day35_Excel_Rerun/US003_Rerun.feature:12)\r\n","duration":14091600,"status":"failed"},"line":12,"name":"basligin \"samsung\" icerdigini dogrular","match":{"arguments":[{"val":"\"samsung\"","offset":9}],"location":"techproed.stepDefinitions.AmazonStepDefinition.basliginIcerdiginiDogrular(java.lang.String)"},"keyword":"And "}],"tags":[{"name":"@rerun"}]},{"start_timestamp":"2023-05-16T20:13:25.747Z","line":14,"name":"TC03_Amazonda_Urun_Aratma","description":"","id":"us003-amazon-testi;tc03-amazonda-urun-aratma","type":"scenario","keyword":"Scenario","steps":[{"result":{"duration":1170075200,"status":"passed"},"line":15,"name":"kullanici_\"amazon_Url\"_sayfasina_gider","match":{"arguments":[{"val":"\"amazon_Url\"","offset":10}],"location":"techproed.stepDefinitions.TechproStepDefinition.kullanici__sayfasina_gider(java.lang.String)"},"keyword":"Given "},{"result":{"duration":2323318900,"status":"passed"},"line":16,"name":"arama_kutusunda_\"nokia\"_aratir","match":{"arguments":[{"val":"\"nokia\"","offset":16}],"location":"techproed.stepDefinitions.AmazonStepDefinition.arama_kutusunda__aratir(java.lang.String)"},"keyword":"And "},{"result":{"error_message":"java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat org.junit.Assert.assertTrue(Assert.java:53)\r\n\tat techproed.stepDefinitions.AmazonStepDefinition.basliginIcerdiginiDogrular(AmazonStepDefinition.java:54)\r\n\tat ✽.basligin \"samsung\" icerdigini dogrular(file:///C:/Users/HakanBatirhan/IdeaProjects/Batch129Cucumber/src/test/resources/features/day35_Excel_Rerun/US003_Rerun.feature:17)\r\n","duration":34985000,"status":"failed"},"line":17,"name":"basligin \"samsung\" icerdigini dogrular","match":{"arguments":[{"val":"\"samsung\"","offset":9}],"location":"techproed.stepDefinitions.AmazonStepDefinition.basliginIcerdiginiDogrular(java.lang.String)"},"keyword":"And "}],"tags":[{"name":"@rerun"}]},{"start_timestamp":"2023-05-16T20:13:29.292Z","line":19,"name":"TC04_Amazonda_Urun_Aratma","description":"","id":"us003-amazon-testi;tc04-amazonda-urun-aratma","type":"scenario","keyword":"Scenario","steps":[{"result":{"duration":1058307400,"status":"passed"},"line":20,"name":"kullanici_\"amazon_Url\"_sayfasina_gider","match":{"arguments":[{"val":"\"amazon_Url\"","offset":10}],"location":"techproed.stepDefinitions.TechproStepDefinition.kullanici__sayfasina_gider(java.lang.String)"},"keyword":"Given "},{"result":{"duration":2787028400,"status":"passed"},"line":21,"name":"arama_kutusunda_\"motorola\"_aratir","match":{"arguments":[{"val":"\"motorola\"","offset":16}],"location":"techproed.stepDefinitions.AmazonStepDefinition.arama_kutusunda__aratir(java.lang.String)"},"keyword":"And "},{"result":{"error_message":"java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat org.junit.Assert.assertTrue(Assert.java:53)\r\n\tat techproed.stepDefinitions.AmazonStepDefinition.basliginIcerdiginiDogrular(AmazonStepDefinition.java:54)\r\n\tat ✽.basligin \"samsung\" icerdigini dogrular(file:///C:/Users/HakanBatirhan/IdeaProjects/Batch129Cucumber/src/test/resources/features/day35_Excel_Rerun/US003_Rerun.feature:22)\r\n","duration":12772700,"status":"failed"},"line":22,"name":"basligin \"samsung\" icerdigini dogrular","match":{"arguments":[{"val":"\"samsung\"","offset":9}],"location":"techproed.stepDefinitions.AmazonStepDefinition.basliginIcerdiginiDogrular(java.lang.String)"},"keyword":"And "}],"tags":[{"name":"@rerun"}]},{"start_timestamp":"2023-05-16T20:13:33.164Z","line":24,"name":"TC05_Amazonda_Urun_Aratma","description":"","id":"us003-amazon-testi;tc05-amazonda-urun-aratma","type":"scenario","keyword":"Scenario","steps":[{"result":{"duration":1718088800,"status":"passed"},"line":25,"name":"kullanici_\"amazon_Url\"_sayfasina_gider","match":{"arguments":[{"val":"\"amazon_Url\"","offset":10}],"location":"techproed.stepDefinitions.TechproStepDefinition.kullanici__sayfasina_gider(java.lang.String)"},"keyword":"Given "},{"result":{"duration":2675808400,"status":"passed"},"line":26,"name":"arama_kutusunda_\"motorola\"_aratir","match":{"arguments":[{"val":"\"motorola\"","offset":16}],"location":"techproed.stepDefinitions.AmazonStepDefinition.arama_kutusunda__aratir(java.lang.String)"},"keyword":"And "},{"result":{"error_message":"java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat org.junit.Assert.assertTrue(Assert.java:53)\r\n\tat techproed.stepDefinitions.AmazonStepDefinition.basliginIcerdiginiDogrular(AmazonStepDefinition.java:54)\r\n\tat ✽.basligin \"motorola\" icerdigini dogrular(file:///C:/Users/HakanBatirhan/IdeaProjects/Batch129Cucumber/src/test/resources/features/day35_Excel_Rerun/US003_Rerun.feature:27)\r\n","duration":9081100,"status":"failed"},"line":27,"name":"basligin \"motorola\" icerdigini dogrular","match":{"arguments":[{"val":"\"motorola\"","offset":9}],"location":"techproed.stepDefinitions.AmazonStepDefinition.basliginIcerdiginiDogrular(java.lang.String)"},"keyword":"And "}],"tags":[{"name":"@rerun"}]}],"name":"US003_Amazon_Testi","description":"","id":"us003-amazon-testi","keyword":"Feature","uri":"file:src/test/resources/features/day35_Excel_Rerun/US003_Rerun.feature","tags":[{"name":"@rerun","type":"Tag","location":{"line":1,"column":1}}]}]
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2023-05-17T19:18:32.738Z",
+        "line": 3,
+        "name": "TC01_TechProEducation_Sayfasi_Testi",
+        "description": "",
+        "id": "us001-parallel-test;tc01-techproeducation-sayfasi-testi",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 13726897200,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "kullanici_\"https://techproeducation.com\"_sayfasina_gider",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://techproeducation.com\"",
+                  "offset": 10
+                }
+              ],
+              "location": "techproed.stepDefinitions.TechproStepDefinition.kullanici__sayfasina_gider(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 367365900,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "cikan_reklam_kapatilir",
+            "match": {
+              "location": "techproed.stepDefinitions.TechproStepDefinition.cikan_reklam_kapatilir()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2020409200,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "kullanici 2 saniye bekler",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 10
+                }
+              ],
+              "location": "techproed.stepDefinitions.TechproStepDefinition.kullaniciSaniyeBekler(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3844833100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "searchBoxda_\"qa\"_arattirir",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"qa\"",
+                  "offset": 12
+                }
+              ],
+              "location": "techproed.stepDefinitions.TechproStepDefinition.searchboxda__arattirir(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@techpro1"
+          }
+        ]
+      }
+    ],
+    "name": "US001_Parallel_Test",
+    "description": "",
+    "id": "us001-parallel-test",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/day36_ParallelTest_CucumberReport/US001_ParallelTest.feature",
+    "tags": []
+  }
+]:[]
+}
+]gs":[]}]
