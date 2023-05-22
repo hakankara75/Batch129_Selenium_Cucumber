@@ -183,4 +183,35 @@ public class ReusableMethods {
         }
         Driver.getDriver().switchTo().window(origin);
     }
+
+    //*[contains(@name,'q')]
+    //*[contains(@title,'Ara')]
+    //*[contains(@maxlength,'2048')]
+    //*[contains(@maxlength,'20')]
+    // * [cointains ( @Attribute = ’Value’) ]
+
+
+    /**
+     * Bu metot ile bir elementin tag'ı ve texti verilerek locate alınır
+     * @param tag elementin tag'ı
+     * @param text elementin textidir
+     * @return element locate döndürür
+     */
+    public WebElement xpathContainsLocateAlma(String tag, String text){
+        WebElement element = Driver.getDriver().findElement(By.xpath("//"+tag+"[contains(text(),'"+text+"')]"));
+        return element;
+
+    }
+
+
+    /**
+     * Bu metot xpath contains ile bir textin locatini alıp geriye text dönderir.
+     * @return
+     */
+    public String xpathContainsTextAlma(String tag, String text){
+
+        WebElement element = Driver.getDriver().findElement(By.xpath("//"+tag+"[contains(text(),'"+text+"')]"));
+        text = element.getText();
+        return text;
+    }
 }
