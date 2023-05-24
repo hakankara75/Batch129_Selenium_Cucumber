@@ -48,7 +48,7 @@ asagida hata alinirsa screenshot yapilacagina dair metot var
     public void setup4(){
        /*
     bu before hooks mantiginin anlasilmasi icin yapildi. normalde hook icinde boyle uzun kodlar olmaz.
-    feature ya da runnerdan calistirsak da once before calisir sonra feature sonra afrer calisir.
+    feature ya da runnerdan calistirsak da once before calisir sonra feature sonra after calisir.
      */
         System.out.println("Amazonda Selenium aratildi");
         Driver.getDriver().get(ConfigReader.getProperty("blueRentACarUrl"));
