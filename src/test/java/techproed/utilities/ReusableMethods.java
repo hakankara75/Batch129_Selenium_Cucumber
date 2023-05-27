@@ -119,6 +119,15 @@ public class ReusableMethods {
 
     }
 
+    /**  bu metot sayfayi girilen elemente goturur
+     * @param element girilmesi gereken locatidir
+     */
+    public static void scrollToElementWithWebElement(WebElement element) {
+        WebElement bottom = element;
+        Actions actions = new Actions(Driver.getDriver());
+        actions.scrollToElement(bottom).perform();
+    }
+
     public static void scrollIntoViewByJavaScript(WebElement webElement){
         JavascriptExecutor jse=(JavascriptExecutor) Driver.getDriver();//Casting
         jse.executeScript("arguments[0].scrollIntoView(true);",webElement);
