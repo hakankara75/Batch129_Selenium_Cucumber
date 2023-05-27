@@ -128,6 +128,10 @@ public class ReusableMethods {
         actions.scrollToElement(bottom).perform();
     }
 
+    /**
+     * bu metot elementin ustune JavascriptExecutor ile goturur
+     @param webElement girilmesi gereken locate dir
+     */
     public static void scrollIntoViewByJavaScript(WebElement webElement){
         JavascriptExecutor jse=(JavascriptExecutor) Driver.getDriver();//Casting
         jse.executeScript("arguments[0].scrollIntoView(true);",webElement);
