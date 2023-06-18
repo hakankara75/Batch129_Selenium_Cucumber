@@ -1,7 +1,7 @@
 package techproed.runners;
 /*
-runner class ile calistirip hata aldigimiz, testoutput klasoru altina failed_scenario.txt dosyasina kaydedilen hatali testleri
-otomatik olarak yeniden kosar bu class
+runner class ile calistirip hata aldigimiz, testoutput klasoru altina failed_scenario.txt dosyasina
+ kaydedilen hatali testleri otomatik olarak yeniden kosar bu class
  */
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
