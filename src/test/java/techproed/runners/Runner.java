@@ -23,7 +23,7 @@ senaryoyu çalıştırabiliriz
                 features = "src/test/resources/features",
                  glue = {"techproed/stepDefinitions"},//Bu parametre ile kodlarımızı yazdığımız stepDefinition
                                                      //class'ının packege'ını belirtiriz
-                 tags = "@techpro3",
+                 tags = "@MedunnaRoom",
                  dryRun = false                               )
 /*
 features ===> features'ların olduğu packega'ın yolunu ver(ContentRoot)

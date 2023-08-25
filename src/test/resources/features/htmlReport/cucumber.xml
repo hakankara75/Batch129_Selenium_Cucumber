@@ -1,50 +1,415 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="18.285" tests="1" skipped="0" failures="1" errors="0">
-<testcase classname="US002_Parallel_Test" name="3TC01_TechProEducation_Sayfasi_Testi" time="18.139">
-<failure type="org.openqa.selenium.WebDriverException" message="disconnected: unable to send message to renderer
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=113.0.5672.127)
-Build info: version: '4.8.3', revision: 'e5e76298c3'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [690d74d6d49224629bb8600a18e9e7c9, findElement {using=xpath, value=//*[@class='eicon-close']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\HAKANB~1.DES\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:62616}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62616/devtoo..., se:cdpVersion: 113.0.5672.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 690d74d6d49224629bb8600a18e9e7c9">
-<![CDATA[org.openqa.selenium.WebDriverException: disconnected: unable to send message to renderer
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=113.0.5672.127)
-Build info: version: '4.8.3', revision: 'e5e76298c3'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [690d74d6d49224629bb8600a18e9e7c9, findElement {using=xpath, value=//*[@class='eicon-close']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\HAKANB~1.DES\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:62616}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62616/devtoo..., se:cdpVersion: 113.0.5672.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 690d74d6d49224629bb8600a18e9e7c9
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+<testsuite name="Cucumber" time="13.798" tests="4" skipped="0" failures="4" errors="0">
+<testcase classname="Medunna Oda Oluşturma    #1" name="Oda Olusturma    #3      #bu loop ozelligi verir. tum basamaklarda ayni islemleri tekrar eder - #4 - Example #1.1" time="6.155">
+<failure type="io.cucumber.core.exception.CucumberException" message="Failed to instantiate class techproed.stepDefinitions.MedunnaStepDefinitions">
+<![CDATA[io.cucumber.core.exception.CucumberException: Failed to instantiate class techproed.stepDefinitions.MedunnaStepDefinitions
+	at io.cucumber.core.backend.DefaultObjectFactory.cacheNewInstance(DefaultObjectFactory.java:67)
+	at io.cucumber.core.backend.DefaultObjectFactory.getInstance(DefaultObjectFactory.java:45)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:130)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:130)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at io.cucumber.junit.Cucumber$RunBeforeAllHooks.evaluate(Cucumber.java:266)
+	at io.cucumber.junit.Cucumber$RunAfterAllHooks.evaluate(Cucumber.java:281)
+	at io.cucumber.junit.Cucumber$StartTestRun.evaluate(Cucumber.java:233)
+	at io.cucumber.junit.Cucumber$FinishTestRun.evaluate(Cucumber.java:248)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:79)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at io.cucumber.core.backend.DefaultObjectFactory.cacheNewInstance(DefaultObjectFactory.java:53)
+	... 46 more
+Caused by: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: This version of ChromeDriver only supports Chrome version 114
+Current browser version is 116.0.5845.111 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe 
+Host info: host: 'DESKTOP-KA8SOKR', ip: '192.168.1.100'
+Build info: version: '4.8.3', revision: 'e5e76298c3'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}}]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:148)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:106)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:165)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at jdk.proxy2/jdk.proxy2.$Proxy25.click(Unknown Source)
-	at techproed.stepDefinitions.TechproStepDefinition.cikan_reklam_kapatilir(TechproStepDefinition.java:36)
-	at ✽.cikan_reklam_kapatilir(file:///C:/Users/HakanBatirhan/IdeaProjects/Batch129Cucumber/src/test/resources/features/day36_ParallelTest_CucumberReport/US002_Parallel_Test.feature:5)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:229)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:157)
+	at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:101)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:84)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:73)
+	at techproed.utilities.Driver.getDriver(Driver.java:39)
+	at techproed.pages.MedunnaPage.<init>(MedunnaPage.java:11)
+	at techproed.stepDefinitions.MedunnaStepDefinitions.<init>(MedunnaStepDefinitions.java:13)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	... 49 more
 ]]>
 </failure>
 <system-out><![CDATA[
-Given kullanici_"https://techproeducation.com"_sayfasina_gider..............passed
-Then cikan_reklam_kapatilir.................................................failed
-When kullanici 2 saniye bekler..............................................skipped
-And searchBoxda_"python"_aratir.............................................skipped
+Given "https://medunna.com/" adresine git...................................failed
+When kullanici simgesini tikla..............................................skipped
+And sign in secenegini tikla................................................skipped
+And usarname kutusuna "mark_twain" gir......................................skipped
+And password kutusuna "Mark.123" gir........................................skipped
+And remember me radio butonunu tikla........................................skipped
+And sign in butonunu tikla..................................................skipped
+When items&titles sekmesini tikla...........................................skipped
+And room secenegini tikla...................................................skipped
+And create a new room botonunu tikla........................................skipped
+And room number kutusuna "2015341" gir......................................skipped
+And room type drop downdan "DELUXE" sec.....................................skipped
+And price kutusuna "10" gir.................................................skipped
+And description kutusuna "Balkonlu oda" gir.................................skipped
+And save butonunu tikla.....................................................skipped
+Then kaydedildi alertini dogrula............................................skipped
+And sayfayi_kapatir.........................................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Medunna Oda Oluşturma    #1" name="Oda Olusturma    #3      #bu loop ozelligi verir. tum basamaklarda ayni islemleri tekrar eder - #4 - Example #1.2" time="2.744">
+<failure type="io.cucumber.core.exception.CucumberException" message="Failed to instantiate class techproed.stepDefinitions.MedunnaStepDefinitions">
+<![CDATA[io.cucumber.core.exception.CucumberException: Failed to instantiate class techproed.stepDefinitions.MedunnaStepDefinitions
+	at io.cucumber.core.backend.DefaultObjectFactory.cacheNewInstance(DefaultObjectFactory.java:67)
+	at io.cucumber.core.backend.DefaultObjectFactory.getInstance(DefaultObjectFactory.java:45)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:130)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:130)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at io.cucumber.junit.Cucumber$RunBeforeAllHooks.evaluate(Cucumber.java:266)
+	at io.cucumber.junit.Cucumber$RunAfterAllHooks.evaluate(Cucumber.java:281)
+	at io.cucumber.junit.Cucumber$StartTestRun.evaluate(Cucumber.java:233)
+	at io.cucumber.junit.Cucumber$FinishTestRun.evaluate(Cucumber.java:248)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:79)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at io.cucumber.core.backend.DefaultObjectFactory.cacheNewInstance(DefaultObjectFactory.java:53)
+	... 46 more
+Caused by: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: This version of ChromeDriver only supports Chrome version 114
+Current browser version is 116.0.5845.111 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe 
+Host info: host: 'DESKTOP-KA8SOKR', ip: '192.168.1.100'
+Build info: version: '4.8.3', revision: 'e5e76298c3'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}}]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:148)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:106)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:165)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:229)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:157)
+	at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:101)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:84)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:73)
+	at techproed.utilities.Driver.getDriver(Driver.java:39)
+	at techproed.pages.MedunnaPage.<init>(MedunnaPage.java:11)
+	at techproed.stepDefinitions.MedunnaStepDefinitions.<init>(MedunnaStepDefinitions.java:13)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	... 49 more
+]]>
+</failure>
+<system-out><![CDATA[
+Given "https://medunna.com/" adresine git...................................failed
+When kullanici simgesini tikla..............................................skipped
+And sign in secenegini tikla................................................skipped
+And usarname kutusuna "mark_twain" gir......................................skipped
+And password kutusuna "Mark.123" gir........................................skipped
+And remember me radio butonunu tikla........................................skipped
+And sign in butonunu tikla..................................................skipped
+When items&titles sekmesini tikla...........................................skipped
+And room secenegini tikla...................................................skipped
+And create a new room botonunu tikla........................................skipped
+And room number kutusuna "3415027" gir......................................skipped
+And room type drop downdan "SUITE" sec......................................skipped
+And price kutusuna "20" gir.................................................skipped
+And description kutusuna "Temiz oda" gir....................................skipped
+And save butonunu tikla.....................................................skipped
+Then kaydedildi alertini dogrula............................................skipped
+And sayfayi_kapatir.........................................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Medunna Oda Oluşturma    #1" name="Oda Olusturma    #3      #bu loop ozelligi verir. tum basamaklarda ayni islemleri tekrar eder - #4 - Example #1.3" time="1.947">
+<failure type="io.cucumber.core.exception.CucumberException" message="Failed to instantiate class techproed.stepDefinitions.MedunnaStepDefinitions">
+<![CDATA[io.cucumber.core.exception.CucumberException: Failed to instantiate class techproed.stepDefinitions.MedunnaStepDefinitions
+	at io.cucumber.core.backend.DefaultObjectFactory.cacheNewInstance(DefaultObjectFactory.java:67)
+	at io.cucumber.core.backend.DefaultObjectFactory.getInstance(DefaultObjectFactory.java:45)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:130)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:130)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at io.cucumber.junit.Cucumber$RunBeforeAllHooks.evaluate(Cucumber.java:266)
+	at io.cucumber.junit.Cucumber$RunAfterAllHooks.evaluate(Cucumber.java:281)
+	at io.cucumber.junit.Cucumber$StartTestRun.evaluate(Cucumber.java:233)
+	at io.cucumber.junit.Cucumber$FinishTestRun.evaluate(Cucumber.java:248)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:79)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at io.cucumber.core.backend.DefaultObjectFactory.cacheNewInstance(DefaultObjectFactory.java:53)
+	... 46 more
+Caused by: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: This version of ChromeDriver only supports Chrome version 114
+Current browser version is 116.0.5845.111 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe 
+Host info: host: 'DESKTOP-KA8SOKR', ip: '192.168.1.100'
+Build info: version: '4.8.3', revision: 'e5e76298c3'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}}]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:148)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:106)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:165)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:229)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:157)
+	at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:101)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:84)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:73)
+	at techproed.utilities.Driver.getDriver(Driver.java:39)
+	at techproed.pages.MedunnaPage.<init>(MedunnaPage.java:11)
+	at techproed.stepDefinitions.MedunnaStepDefinitions.<init>(MedunnaStepDefinitions.java:13)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	... 49 more
+]]>
+</failure>
+<system-out><![CDATA[
+Given "https://medunna.com/" adresine git...................................failed
+When kullanici simgesini tikla..............................................skipped
+And sign in secenegini tikla................................................skipped
+And usarname kutusuna "mark_twain" gir......................................skipped
+And password kutusuna "Mark.123" gir........................................skipped
+And remember me radio butonunu tikla........................................skipped
+And sign in butonunu tikla..................................................skipped
+When items&titles sekmesini tikla...........................................skipped
+And room secenegini tikla...................................................skipped
+And create a new room botonunu tikla........................................skipped
+And room number kutusuna "4605751" gir......................................skipped
+And room type drop downdan "TWIN" sec.......................................skipped
+And price kutusuna "11" gir.................................................skipped
+And description kutusuna "Manzarali oda" gir................................skipped
+And save butonunu tikla.....................................................skipped
+Then kaydedildi alertini dogrula............................................skipped
+And sayfayi_kapatir.........................................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Medunna Oda Oluşturma    #1" name="Oda Olusturma    #3      #bu loop ozelligi verir. tum basamaklarda ayni islemleri tekrar eder - #4 - Example #1.4" time="2.478">
+<failure type="io.cucumber.core.exception.CucumberException" message="Failed to instantiate class techproed.stepDefinitions.MedunnaStepDefinitions">
+<![CDATA[io.cucumber.core.exception.CucumberException: Failed to instantiate class techproed.stepDefinitions.MedunnaStepDefinitions
+	at io.cucumber.core.backend.DefaultObjectFactory.cacheNewInstance(DefaultObjectFactory.java:67)
+	at io.cucumber.core.backend.DefaultObjectFactory.getInstance(DefaultObjectFactory.java:45)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:130)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:130)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at io.cucumber.junit.Cucumber$RunBeforeAllHooks.evaluate(Cucumber.java:266)
+	at io.cucumber.junit.Cucumber$RunAfterAllHooks.evaluate(Cucumber.java:281)
+	at io.cucumber.junit.Cucumber$StartTestRun.evaluate(Cucumber.java:233)
+	at io.cucumber.junit.Cucumber$FinishTestRun.evaluate(Cucumber.java:248)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:79)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at io.cucumber.core.backend.DefaultObjectFactory.cacheNewInstance(DefaultObjectFactory.java:53)
+	... 46 more
+Caused by: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: This version of ChromeDriver only supports Chrome version 114
+Current browser version is 116.0.5845.111 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe 
+Host info: host: 'DESKTOP-KA8SOKR', ip: '192.168.1.100'
+Build info: version: '4.8.3', revision: 'e5e76298c3'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}}]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:148)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:106)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:165)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:229)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:157)
+	at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:101)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:84)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:73)
+	at techproed.utilities.Driver.getDriver(Driver.java:39)
+	at techproed.pages.MedunnaPage.<init>(MedunnaPage.java:11)
+	at techproed.stepDefinitions.MedunnaStepDefinitions.<init>(MedunnaStepDefinitions.java:13)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	... 49 more
+]]>
+</failure>
+<system-out><![CDATA[
+Given "https://medunna.com/" adresine git...................................failed
+When kullanici simgesini tikla..............................................skipped
+And sign in secenegini tikla................................................skipped
+And usarname kutusuna "mark_twain" gir......................................skipped
+And password kutusuna "Mark.123" gir........................................skipped
+And remember me radio butonunu tikla........................................skipped
+And sign in butonunu tikla..................................................skipped
+When items&titles sekmesini tikla...........................................skipped
+And room secenegini tikla...................................................skipped
+And create a new room botonunu tikla........................................skipped
+And room number kutusuna "9204681" gir......................................skipped
+And room type drop downdan "DAYCARE" sec....................................skipped
+And price kutusuna "45" gir.................................................skipped
+And description kutusuna "Tertemiz oda" gir.................................skipped
+And save butonunu tikla.....................................................skipped
+Then kaydedildi alertini dogrula............................................skipped
+And sayfayi_kapatir.........................................................skipped
 ]]></system-out>
 </testcase>
 </testsuite>
