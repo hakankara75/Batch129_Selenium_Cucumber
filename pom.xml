@@ -13,6 +13,12 @@
         <maven.compiler.target>19</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+    <!-- https://mvnrepository.com/artifact/org.bytedeco/tesseract-platform -->
+    <dependency>
+        <groupId>org.bytedeco</groupId>
+        <artifactId>tesseract-platform</artifactId>
+        <version>4.1.1-1.5.4</version>
+    </dependency>
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
