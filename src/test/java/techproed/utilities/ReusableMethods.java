@@ -7,6 +7,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.awt.*;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -31,6 +34,7 @@ public class ReusableMethods {
     //Alert ACCEPT
     public static void alertAccept(){
         Driver.getDriver().switchTo().alert().accept();
+        Alert alert=new Alert();
     }
     //Alert DISMISS
     public static void alertDismiss(){
@@ -111,15 +115,7 @@ public class ReusableMethods {
         }
     }
 
-    //bu metot ile herhangi bir webelemente JavascriptExecutor kullanarak tiklayabilirim
-    public static void clickByJavaScript(WebElement webElement){
-        JavascriptExecutor jse= (JavascriptExecutor) Driver.getDriver();
-
-        jse.executeScript("arguments[0].click();", webElement);
-
-    }
-
-    /**  bu metot sayfayi girilen elemente goturur
+       /**  bu metot sayfayi girilen elemente goturur
      * @param element girilmesi gereken locatidir
      */
     public static void scrollToElementWithWebElement(WebElement element) {
@@ -145,12 +141,6 @@ public class ReusableMethods {
     }
 
 
-    //elemente JavascriptExecutor ile string gonderir(java sendkey() ile ayni)
-    public static void sendKeyWithJavaScript(String string, WebElement webElement) {
-        JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();//Casting
-        jse.executeScript("arguments[0].value = '"+string+"';", webElement);
-
-    }
     //bu metot ile sayfayi en yukari kaydirabilirim
     public static void scrollTopByJavaScript(){
         JavascriptExecutor js= (JavascriptExecutor) Driver.getDriver();
@@ -251,6 +241,231 @@ public class ReusableMethods {
 
         Actions action = new Actions(Driver.getDriver());
         action.contextClick(element).perform();
+
+    }
+
+    /**
+     * elemente JavascriptExecutor ile string gonderir(java sendkey() ile ayni)
+     *
+     * @param string     webElemente sendKey ile gonderilecek text
+     * @param webElement sendKey ile gonderilecek webelement
+     */
+    public static void sendKeyWithJavaScript(String string, WebElement webElement) {
+        JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();//Casting
+        jse.executeScript("arguments[0].value = '" + string + "';", webElement);
+
+    }
+
+    /**
+     * javascript ile webelemente sendkey yapma methodu.
+     *
+     * @param webelementXpathYolu webelement yolu string olarak xpath seklinde girilir
+     * @param gonderilecekText    sendkey yapilacak text
+     */
+    public static void sendKeyWithJavaScriptWithXpath(String webelementXpathYolu, String gonderilecekText) {
+        WebElement element = Driver.getDriver().findElement(By.xpath(webelementXpathYolu));
+        sendKeyWithJavaScript(gonderilecekText, element);
+    }
+
+    /**
+     * javascript ile webelemente sendkey yapma methodu.
+     *
+     * @param webelementCssYolu webelement yolu string olarak Css seklinde girilir
+     * @param gonderilecekText  sendkey yapilacak text
+     */
+    public static void sendKeyWithJavaScriptWithCss(String webelementCssYolu, String gonderilecekText) {
+        WebElement element = Driver.getDriver().findElement(By.cssSelector(webelementCssYolu));
+        sendKeyWithJavaScript(gonderilecekText, element);
+    }
+
+
+    /**
+     * bu metot ile herhangi bir webelemente xpath vererek JavascriptExecutor kullanarak tiklayabilirim
+     *
+     * @param string elementin xpath cinsinden yolu
+     */
+    public static void clickByJavaScriptWithXpath(String string) {
+        WebElement element = Driver.getDriver().findElement(By.xpath(string));
+        JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
+
+        jse.executeScript("arguments[0].click();", element);
+
+    }
+
+
+    /**
+     * bu metot ile herhangi bir webelemente JavascriptExecutor kullanarak tiklayabilirim
+     *
+     * @param webElement click yapilacak webelement
+     */
+    public static void clickByJavaScript(WebElement webElement) {
+        JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
+
+        jse.executeScript("arguments[0].click();", webElement);
+
+    }
+
+
+    /**
+     * bu metot ile herhangi bir webelemente cssSelector vererek JavascriptExecutor kullanarak tiklayabilirim
+     *
+     * @param string elementin xpath cinsinden yolu
+     */
+    public static void clickByJavaScriptWithCss(String string) {
+        WebElement element = Driver.getDriver().findElement(By.cssSelector(string));
+        JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
+
+        jse.executeScript("arguments[0].click();", element);
+
+    }
+
+    /**
+     * Bu metot ile elementin className değeri string olarak verilerek o classtaki text alinir.
+     *
+     * @param className text degeri alinmak istenen class ismi string olarak verilir
+     * @return
+     */
+    public static String getTextWithJavaScript(String className) {
+        WebElement element = Driver.getDriver().findElement(By.className(className));
+
+        // JavaScriptExecutor kullanarak elementin içeriğini al
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) Driver.getDriver();
+        String text = (String) jsExecutor.executeScript("return arguments[0].textContent;", element);
+        return text;
+    }
+
+    /**
+     * Bu metot string olarak verilen textteki rakamlar haric herseyi siler ve Integer'a donusturur.
+     *
+     * @param string icindeki harf, karakter ve bosluklar silinecek text
+     * @return Integer dondurur
+     */
+    public static Integer stringConverToInteger(String string) {
+        Integer integer = Integer.valueOf(string.replaceAll("[^0-9]", ""));
+        return integer;
+    }
+
+    /**
+     * sayfayi verilen pixel kadar asagi kaydirir
+     *
+     * @param scrollSize pixel degeridir. integer olarak yazilmali
+     */
+    public static void scroll(int scrollSize) {
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) Driver.getDriver();
+
+        // Örneğin, sayfayı 500 piksel aşağı kaydırmak için:
+        jsExecutor.executeScript("window.scrollBy(0, " + scrollSize + ");");
+    }
+
+    /**
+     * * Bu metot sayfadaki expected ve actual urun sayilari birbirine esit olana kadar sayfayi scroll yapar.
+     * * Esit degilse sayfa altindaki sayfa numaralarina basarak son sayfaya ve son urune kadar ilerler.
+     * sonunda da toplam urun sayisini dondurur
+     *
+     * @param first  sayfada goruntulenen urun sayisini int olarak verilmeli
+     * @param second buraya baslangic degeri olarak 0 verilmeli
+     * @return bu metot toplam urun sayisini verir
+     */
+    public static long ifNotEqualGoScroll(int first, int second) {
+        Long urunSayisiniEkle = 0L;
+        do {
+            JavascriptExecutor jsExecutor = (JavascriptExecutor) Driver.getDriver();
+            long elementCountJavascript = (long) jsExecutor.executeScript(
+                    "return document.querySelectorAll('.ProductItem__Wrapper').length;"
+            );
+
+            long elementCount = elementCountJavascript;
+
+            if (first != elementCount) {
+                urunSayisiniEkle = urunSayisiniEkle + elementCount;
+                WebElement element = webelementJavaScript("document.querySelector(\"a[title='Sonraki Sayfa']\")");
+
+                if (first != urunSayisiniEkle) {
+                    webElementScreenShoot(element);
+                    clickByJavaScript(element);
+                }
+            }
+        } while (first != urunSayisiniEkle);
+        return urunSayisiniEkle;
+    }
+
+    /**
+     * JavaScript ile webelement olusturma
+     *
+     * @param javascriptYolu internet sitesinden sag klik ile JS yolunu kopyala ile alınan metin olacak
+     */
+    public static WebElement webelementJavaScript(String javascriptYolu) {
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        WebElement webElement = (WebElement) js.executeScript("return " + javascriptYolu + "");
+        return webElement;
+    }
+    public static void flash(WebElement element,WebDriver driver){
+        JavascriptExecutor js= (JavascriptExecutor) driver;
+        String elementColor=element.getCssValue("backgroundColor"); //locate alinan yerin  arka plan rengini alir
+        for (int i = 0; i < 10; i++) {
+            changeColor("rgb(0,0,0)", element, driver); //elemente siyah renk verir rgb kizmi rengi belirtir
+            //changeColor("rgb(255,0,0)", element, driver); //kirmizi renk
+            //changeColor("rgb(0,255,0)", element, driver); //yesil renk
+            changeColor(elementColor, element, driver);
+        }
+    }
+
+    /**
+     * flash metoduna renk degistirme islemini yaptirir. Elementin arka plan renginin parametre olarak atanacagini bildirir.
+     * @param color arka plan rengi
+     * @param element   arka plan rengi degisecek element
+     * @param driver
+     */
+    public static void changeColor(String color, WebElement element, WebDriver driver){
+        JavascriptExecutor js= (JavascriptExecutor) driver; //javascript kodlarini calistirir
+        js.executeScript("arguments[0].style.backgroundColor='"+color+"'", element); //elementin renginin degismesini sağlar
+
+        try{
+            Thread.sleep(20);
+        }catch (Exception e){
+
+        }
+    }
+    public static void robotClassDosyaYukleme(String filePath){
+        try{
+            ReusableMethods.bekle(3);
+            StringSelection stringSelection = new StringSelection(filePath);
+            Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection,null);
+            Robot robot = new Robot();
+            //pressing ctrl+v
+            robot.keyPress(KeyEvent.VK_CONTROL);
+            ReusableMethods.bekle(3);
+            robot.keyPress(KeyEvent.VK_V);
+            ReusableMethods.bekle(3);
+            //releasing ctrl+v
+            robot.keyRelease(KeyEvent.VK_CONTROL);
+            ReusableMethods.bekle(3);
+            robot.keyRelease(KeyEvent.VK_V);
+            ReusableMethods.bekle(3);
+            System.out.println("PASSED");
+            //pressing enter
+            ReusableMethods.bekle(3);
+            robot.keyPress(KeyEvent.VK_ENTER);
+            ReusableMethods.bekle(3);
+            //releasing enter
+            robot.keyRelease(KeyEvent.VK_ENTER);
+            ReusableMethods.bekle(3);
+            System.out.println("ENTER");
+        }catch (Exception e){
+        }
+    }
+
+    /** Bu metot islem yapilacak elementin etrafina renkli cerceve cizerek belirgin hale getirir.
+     *
+     * @param locate islem yapilacak elementin cssSelector turunden locate string olarak girilmeli
+     */
+    public static void showElementWithFrame(String locate){
+        WebElement element = Driver.getDriver().findElement(By.cssSelector(""+locate+""));
+        String script = "arguments[0].style.border='3px solid red';";
+//        String script = "arguments[0].style.border='3px solid white';";
+//        String script = "arguments[0].style.border='3px solid yellow';";
+//        String script = "arguments[0].style.border='3px solid green';";
+        ((JavascriptExecutor) Driver.getDriver()).executeScript(script, element);
 
     }
 }
