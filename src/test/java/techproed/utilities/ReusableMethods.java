@@ -34,8 +34,7 @@ public class ReusableMethods {
     //Alert ACCEPT
     public static void alertAccept(){
         Driver.getDriver().switchTo().alert().accept();
-        Alert alert=new Alert();
-    }
+          }
     //Alert DISMISS
     public static void alertDismiss(){
         Driver.getDriver().switchTo().alert().dismiss();
