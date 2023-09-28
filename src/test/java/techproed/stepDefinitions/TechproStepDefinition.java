@@ -38,7 +38,28 @@ public class TechproStepDefinition {
 
     @Given("kullanici_{string}_sayfasina_gider")
     public void kullanici__sayfasina_gider(String arg0) {
-        Driver.getDriver().get(ConfigReader.getProperty("techproed_Url"));
+        switch (arg0) {
+            case "blueRentACarUrl":
+                Driver.getDriver().get(ConfigReader.getProperty("blueRentACarUrl"));
+                break;
+            case "techproed_Url":
+                Driver.getDriver().get(ConfigReader.getProperty("techproed_Url"));
+                break;
+            case "amazon_Url":
+                Driver.getDriver().get(ConfigReader.getProperty("amazon_Url"));
+                break;
+            case "testCenterUrl":
+                Driver.getDriver().get(ConfigReader.getProperty("testCenterUrl"));
+                break;
+            case "dataTableUrl":
+                Driver.getDriver().get(ConfigReader.getProperty("dataTableUrl"));
+                break;
+            case "googleUrl":
+                Driver.getDriver().get(ConfigReader.getProperty("googleUrl"));
+                break;
+            default:
+                break;
+        }
     }
 
     @And("kullanici {int} saniye bekler")

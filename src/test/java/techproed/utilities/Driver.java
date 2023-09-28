@@ -36,20 +36,16 @@ public class Driver {
         if (driver == null) {
             switch (ConfigReader.getProperty("browser")) {
                 case "chrome":
-                    WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver(new ChromeOptions().addArguments("--remote-allow-origins=*"));
                     break;
                 case "edge":
-                    WebDriverManager.edgedriver().setup();
                     driver = new EdgeDriver(new EdgeOptions().addArguments("--remote-allow-origins=*"));
                     break;
                 case "chrome-headless":
-                    WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver(new ChromeOptions().setHeadless(true));
                     //bu secenekte chrome acilmadan test kosulur
                     break;
                 default:
-                    WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver(new ChromeOptions().addArguments("--remote-allow-origins=*"));
             }
 

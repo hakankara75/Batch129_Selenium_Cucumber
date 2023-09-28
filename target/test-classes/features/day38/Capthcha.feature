@@ -1,3 +1,5 @@
 Feature: Captcha
   Scenario: Captcha
-    Given Captcha
+    Given Captcha engelle
+    Then Captcha engelledigini dogrula
+
