@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="52.212" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="BlueRentralCar_Excel_Login" name="TC01_Positive_Login_Testi" time="52.018">
+<testsuite name="Cucumber" time="15.869" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="BlueRentralCar_Excel_Login" name="TC02_Positive_Login_Testi" time="15.708">
 <system-out><![CDATA[
 Given kullanici_"blueRentACarUrl"_sayfasina_gider...........................passed
-And kullanici_exceldeki_"customer_info"sayfasindaki_kullanici_bilgileri_ile_login_olur.passed
+And kullanici_exceldeki_"admin_info"sayfasindaki_kullanici_bilgileri_ile_login_olur.passed
 ]]></system-out>
 </testcase>
 </testsuite>

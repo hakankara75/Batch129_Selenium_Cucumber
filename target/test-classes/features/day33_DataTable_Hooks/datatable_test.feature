@@ -2,7 +2,6 @@
 Feature: Data Table Test
 
   Scenario: Goole Search
-    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     Given kullanici_google_anasayfaya_gider
     When kullanici verilen bilgileri aratir
       | Bilgiler |
