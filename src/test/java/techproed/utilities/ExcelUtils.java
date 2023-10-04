@@ -15,31 +15,51 @@ public class ExcelUtils {
     private Workbook workbook;
     private Sheet sheet;
     private String path;
-    //Constuctor: Excel path'ine ve Excel'deki sayfaya ulaşmak için 2 parametreli cons. oluşturduk
+    /**Excel path'ine ve Excel'deki sayfaya ulaşmak için 2 parametreli cons. oluşturduk
+     *
+     * @param path okunacak excell dosyasinin yolu
+     * @param sheetName excell icindeki sayfanin adi
+     */
     public ExcelUtils(String path,String sheetName){
         this.path = path;
         try {
-            FileInputStream fis = new FileInputStream(path);
-            workbook = WorkbookFactory.create(fis);
-            sheet = workbook.getSheet(sheetName);
+            FileInputStream fis = new FileInputStream(path);  //bir dosyayi okumak icin fis objesi olusturur
+            workbook = WorkbookFactory.create(fis); //Apache POI kütüphanesini kullanarak bir Excel çalışma kitabı (Workbook) oluşturur
+            sheet = workbook.getSheet(sheetName); //Apache POI kütüphanesini kullanarak Excel dosyasındaki belirli bir sayfayı (sheet) alir
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
-    //Satir ve sütun sayilari girildiğinde, o hücredeki veriyi return eder
+
+    /**Excell dosyasinda satir ve sutun numarasi verilen hucredeki veriyi return eder
+     * @param rowNum satir numarasi
+     * @param colNum sutun numarasi
+     * @return
+     */
     public String getCellData(int rowNum,int colNum){
         Cell cell = sheet.getRow(rowNum).getCell(colNum);
         return cell.toString();
     }
-    //Exceldeki satir sayisini return eder
+
+
+    /**Exceldeki satir sayisini return eder
+     * @return
+     */
     public int rowCount(){
         return  sheet.getLastRowNum();
     }
-    //Exceldeki sütun sayisini return eder
+
+    /** Exceldeki sütun sayisini return eder
+     * @return
+     */
     public int columnCount(){
         return sheet.getRow(0).getLastCellNum();
     }
-    //Exceldeki dataları başlık olmadan alabilmek için 2 boyutlu bir array method oluşturalım
+    //
+
+    /**Exceldeki dataları başlık olmadan alabilmek için 2 boyutlu bir array yapar
+     * @return
+     */
     public String[][] getDataArray() {
         String[][] data = new String[rowCount()][columnCount()];
         for (int i = 1; i <=rowCount() ; i++) {
@@ -50,7 +70,10 @@ public class ExcelUtils {
         }
         return data;
     }
-    //==============Sutun isimlerini verir==================//
+
+    /**Excell dosyasinda sutun ismini verir
+     * @return
+     */
     public List<String> getColumnsNames() {
         List<String> columns = new ArrayList<>();
         for (Cell cell : sheet.getRow(0)) {
@@ -58,7 +81,13 @@ public class ExcelUtils {
         }
         return columns;
     }
-    //=========Deger, Satir, Sutun girindiginde, O satır ve sutuna girilen veriyi ekler===============//
+
+
+    /**Deger, Satir, Sutun girindiginde, verilen satır ve sutuna girilen degeri ekler
+     * @param value girilmesi gereken deger
+     * @param rowNum satir numarasi
+     * @param colNum sutun numarasi
+     */
     public void setCellData(String value, int rowNum, int colNum) {
         try {
             sheet.getRow(rowNum).createCell(colNum).setCellValue(value);
@@ -69,7 +98,11 @@ public class ExcelUtils {
             e.printStackTrace();
         }
     }
-    //    Bu metot ustdeki metotla birlikde calisir. Overload eder. Parametreleri farklidir
+    /**Deger, Satir, Sutun girindiginde, verilen satır ve sutuna girilen degeri ekler
+     * @param value girilmesi gereken deger
+     * @param row satir numarasi
+     * @param columnName sutun ismini
+     */
     public void setCellData(String value, String columnName, int row) {
         int column = getColumnsNames().indexOf(columnName);
         setCellData(value, row, column);

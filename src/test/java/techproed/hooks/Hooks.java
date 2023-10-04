@@ -1,4 +1,4 @@
-package techproed.pages;
+package techproed.hooks;
 
 
 import io.cucumber.java.After;
@@ -8,6 +8,7 @@ import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import techproed.pages.BlueRentalCarPage;
 import techproed.utilities.ConfigReader;
 import techproed.utilities.Driver;
 import techproed.utilities.ExcelUtils;
@@ -22,8 +23,8 @@ Screenshot alinip rapora koyulur
 asagida hata alinirsa screenshot yapilacagina dair metot var
  */
 
-    //features/day30_IlkFeature/US003_RunnerKullanimi.feature dosyasi asagida ornek olarak calisildi
-    @Before ("All")
+
+    @Before ("All") //@Before importu cucumber'dan olmali
     public void setup(){
         System.out.println("Before Methodu");
 
@@ -73,7 +74,7 @@ asagida hata alinirsa screenshot yapilacagina dair metot var
         }
     }
 
-    @After
+    @After  //@After importu cucumber'dan olmali
     public void teardown(Scenario scenario){// bu class yardimci olacak
         //Eger scenario failed olursa alinan ekran goruntusu rapora eklenecek.
         final byte[] failedScreenShot=((TakesScreenshot)Driver.getDriver()).getScreenshotAs(OutputType.BYTES);

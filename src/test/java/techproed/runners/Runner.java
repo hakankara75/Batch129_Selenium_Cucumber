@@ -21,13 +21,15 @@ senaryoyu çalıştırabiliriz
                         "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},//spark report icin
               //  monochrome = true, //console okunakli hale getirir, renksiz yapar
                 features = "src/test/resources/features",
-                 glue = {"techproed/stepDefinitions"},//Bu parametre ile kodlarımızı yazdığımız stepDefinition
-                                                     //class'ının packege'ını belirtiriz
-                 tags = "@DataTableTest",
+                 glue = {"techproed/stepDefinitions", "techproed/hooks"},
+        /* 1-Bu parametre ile kodlarımızı yazdığımız stepDefinition class'ının packege'ını belirtiriz
+        2- Hooks classin yolunu veririz.
+                                                     */
+                 tags = "@hooks",
                  dryRun = false                               )
 /*
 features ===> features'ların olduğu packega'ın yolunu ver(ContentRoot)
-glue ====> stepDefinition'ların olduğu packega'ın yolunu ver(Source Root)
+glue ====> stepDefinition'ların olduğu packega'ın yolunu ver(Source Root), Hooks class yolunu ver
 tags ====> çalıştırmak istediğin grubu yaz
 dryRun = true ====> eksik step definition bulup gösterir. calismaz. konsolda eksik stepleri gosterir.
  */
