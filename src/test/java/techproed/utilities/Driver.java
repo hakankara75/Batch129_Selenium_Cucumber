@@ -35,6 +35,14 @@ public class Driver {
         if (driver == null) {
             switch (ConfigReader.getProperty("browser")) {
                 case "chrome":
+                    //1-asagideki 3 satirdaki kodlar testleri Headless (Jenkins gibi) kosmak istedigimiz yerlerde aktive edilebilir
+//                    ChromeOptions options = new ChromeOptions();
+//                    options.addArguments("--headless"); // Başsız modu etkinleştir
+//                    options.addArguments("--disable-gpu"); // GPU kullanımını devre dışı bırak
+
+                    //2- yukardaki options objesini ChromeDriver() icine parametre olarak atiyorum
+//                    driver = new ChromeDriver(options);
+//                    break;
                     driver = new ChromeDriver(new ChromeOptions().addArguments("--remote-allow-origins=*"));
                     break;
                 case "edge":

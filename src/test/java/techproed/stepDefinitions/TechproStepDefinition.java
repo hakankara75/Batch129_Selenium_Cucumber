@@ -42,7 +42,7 @@ public class TechproStepDefinition {
             case "blueRentACarUrl":
                 Driver.getDriver().get(ConfigReader.getProperty("blueRentACarUrl"));
                 break;
-            case "techproed_Url":
+            case "https://techproeducation.com":
                 Driver.getDriver().get(ConfigReader.getProperty("techproed_Url"));
                 break;
             case "amazon_Url":

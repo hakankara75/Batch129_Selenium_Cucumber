@@ -26,7 +26,7 @@ senaryoyu çalıştırabiliriz
         /* 1-Bu parametre ile kodlarımızı yazdığımız stepDefinition class'ının packege'ını belirtiriz
         2- Hooks classin yolunu veririz.
                                                      */
-        tags = "@hooks",
+        tags = "@techpro3",
         dryRun = false,
         monochrome = false //false scenario adimlarini renkli gosterir
 )
