@@ -76,8 +76,15 @@ public class ReusableMethods {
     public static void window(int sayi){
         Driver.getDriver().switchTo().window(Driver.getDriver().getWindowHandles().toArray()[sayi].toString());
     }
-    //EXPLICIT WAIT METHODS
-    //Visible Wait
+    /*
+
+     */
+
+    /**
+     * EXPLICIT WAIT METHODS     ile element Visible olana kadar bekler
+     * @param element yerine element locate girilir
+     * @param sayi yerine int cinsinden sayi girilir.
+     */
     public static void visibleWait(WebElement element,int sayi){
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(sayi));
         wait.until(ExpectedConditions.visibilityOf(element));
