@@ -342,7 +342,16 @@ public static void getValueByJavaScript(String id, String attributeName) {
         String text = (String) jsExecutor.executeScript("return arguments[0].textContent;", element);
         return text;
     }
+    /**
+     * bu metot ile JS yolu string olarak verilen elementi JavascriptExecutor kullanarak tiklayabilirim
+     * @param javascriptYolu click yapilacak webelement yolu elementin ustune sag click yapip js path alinarak buraya string olarak verilir
+     */
+    public static void clickJSElementWithJavaScript(String javascriptYolu) {
+        JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
+        WebElement webElement = (WebElement) jse.executeScript("return " + javascriptYolu + "");
+        jse.executeScript("arguments[0].click();", webElement);
 
+    }
     /**
      * Bu metot string olarak verilen textteki rakamlar haric herseyi siler ve Integer'a donusturur.
      *
