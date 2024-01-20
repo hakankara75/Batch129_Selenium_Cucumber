@@ -343,6 +343,14 @@ public static void getValueByJavaScript(String id, String attributeName) {
         return text;
     }
     /**
+     * bu metot ile bir webelement icindeki text temizlenir.
+     * @param element icinden text silinecek olan webelement locate verilir
+     */
+    public static void clearTextBox(WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        js.executeScript("arguments[0].value = '';", element);
+    }
+    /**
      * bu metot ile JS yolu string olarak verilen elementi JavascriptExecutor kullanarak tiklayabilirim
      * @param javascriptYolu click yapilacak webelement yolu elementin ustune sag click yapip js path alinarak buraya string olarak verilir
      */
