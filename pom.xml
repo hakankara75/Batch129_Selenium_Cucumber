@@ -55,6 +55,12 @@
             <version>1.13.0</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/net.masterthought/maven-cucumber-reporting -->
+        <dependency>
+            <groupId>net.masterthought</groupId>
+            <artifactId>maven-cucumber-reporting</artifactId>
+            <version>5.7.6</version>
+        </dependency>
 
     </dependencies>
 
@@ -97,37 +103,42 @@
            </plugin>
 
 
+           <!-- cucumber report icin  -->
            <plugin>
                <groupId>net.masterthought</groupId>
                <artifactId>maven-cucumber-reporting</artifactId>
-               <version>5.0.0</version>
+               <version>5.7.5</version>
                <executions>
                    <execution>
                        <id>execution</id>
-                       <phase>verify</phase>
+                       <phase>test</phase>
                        <goals>
                            <goal>generate</goal>
                        </goals>
                        <configuration>
-                           <projectName>cucumber-framework</projectName>
-                           <outputDirectory>${project.build.directory}</outputDirectory>
+                           <projectName>Cucumber_HTML_Report-</projectName>
+                           <outputDirectory>${project.build.directory}/cucumber-html-reports</outputDirectory>
                            <inputDirectory>${project.build.directory}</inputDirectory>
                            <jsonFiles>
-                               <param>**/json-reports/*.json</param>
-                           </jsonFiles><classificationFiles>->
-                           <param>sample.properties</param>
-                           <param>other.properties</param>
-                       </classificationFiles>
+                               <param>**/json-reports/*.json</param><!-- rapor formati json olacak  -->
+                           </jsonFiles>
+                           <classificationFiles>
+                               <param>sample.properties</param>
+                               <param>other.properties</param>
+                           </classificationFiles>
                        </configuration>
                    </execution>
                </executions>
            </plugin>
-
-
+           <plugin>
+               <groupId>org.apache.maven.plugins</groupId>
+               <artifactId>maven-compiler-plugin</artifactId>
+               <version>3.10.1</version>
+               <configuration>
+                   <source>11</source>
+                   <target>11</target>
+               </configuration>
+           </plugin>
        </plugins>
    </build>
-
-
-
-
 </project>

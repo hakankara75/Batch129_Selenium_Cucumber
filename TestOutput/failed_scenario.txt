@@ -1,1 +1,1 @@
-file:src/test/resources/features/day36_ParallelTest_CucumberReport/US002_Parallel_Test.feature:3
+file:src/test/resources/features/day33_DataTable_Hooks/datatable_test.feature:24

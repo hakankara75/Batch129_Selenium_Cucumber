@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="18.542" tests="1" skipped="0" failures="1" errors="0">
-<testcase classname="US002_Parallel_Test" name="3TC01_TechProEducation_Sayfasi_Testi" time="18.379">
-<failure type="org.openqa.selenium.NoSuchElementException" message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@class='eicon-close']&quot;}
-  (Session info: chrome=119.0.6045.124)
+<testsuite name="Cucumber" time="16.984" tests="1" skipped="0" failures="1" errors="0">
+<testcase classname="Data Table Test" name="BlueRentalCar Login" time="16.706">
+<failure type="org.openqa.selenium.NoSuchElementException" message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#dropdown\-basic\-button&quot;}
+  (Session info: chrome=122.0.6261.57)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.12.1', revision: '8e34639b11'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [53e04a28fb0b3d1150b3df625d3bb984, findElement {using=xpath, value=//*[@class='eicon-close']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.124, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\Hakan\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61887}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61887/devtoo..., se:cdpVersion: 119.0.6045.124, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 53e04a28fb0b3d1150b3df625d3bb984">
-<![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@class='eicon-close']"}
-  (Session info: chrome=119.0.6045.124)
+Command: [a59be9532a6eb77a43ea0cd5c41c29cd, findElement {using=id, value=dropdown-basic-button}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.57, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\Hakan\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56818}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56818/devtoo..., se:cdpVersion: 122.0.6261.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a59be9532a6eb77a43ea0cd5c41c29cd">
+<![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#dropdown\-basic\-button"}
+  (Session info: chrome=122.0.6261.57)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.12.1', revision: '8e34639b11'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [53e04a28fb0b3d1150b3df625d3bb984, findElement {using=xpath, value=//*[@class='eicon-close']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.124, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\Hakan\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61887}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61887/devtoo..., se:cdpVersion: 119.0.6045.124, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 53e04a28fb0b3d1150b3df625d3bb984
+Command: [a59be9532a6eb77a43ea0cd5c41c29cd, findElement {using=id, value=dropdown-basic-button}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.57, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\Hakan\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56818}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56818/devtoo..., se:cdpVersion: 122.0.6261.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a59be9532a6eb77a43ea0cd5c41c29cd
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
@@ -36,15 +36,14 @@ Session ID: 53e04a28fb0b3d1150b3df625d3bb984
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 	at jdk.proxy2/jdk.proxy2.$Proxy27.click(Unknown Source)
-	at techproed.stepDefinitions.TechproStepDefinition.cikan_reklam_kapatilir(TechproStepDefinition.java:36)
-	at ✽.cikan_reklam_kapatilir(file:///C:/Users/Hakan/IdeaProjects/Batch129Cucumber/src/test/resources/features/day36_ParallelTest_CucumberReport/US002_Parallel_Test.feature:5)
+	at techproed.stepDefinitions.BlueRentalCarStepDefinitions.loginOlurMap(BlueRentalCarStepDefinitions.java:67)
+	at ✽.login olur map(file:///C:/Users/Hakan/IdeaProjects/Batch129Cucumber/src/test/resources/features/day33_DataTable_Hooks/datatable_test.feature:26)
 ]]>
 </failure>
 <system-out><![CDATA[
-Given kullanici_"https://techproeducation.com"_sayfasina_gider..............passed
-Then cikan_reklam_kapatilir.................................................failed
-When kullanici 2 saniye bekler..............................................skipped
-And searchBoxda_"python"_aratir.............................................skipped
+Given kullanici blue rental car sayfasina gider.............................passed
+When login olur map.........................................................failed
+Then sayfayi_kapatir........................................................skipped
 ]]></system-out>
 </testcase>
 </testsuite>
