@@ -110,7 +110,11 @@ public class ReusableMethods {
             throw new RuntimeException(e);
         }
     }
-    //WebElement ScreenShot
+
+    /**
+     * bu metot ile sayfadaki tek bir elementin screenshot'ı alınır
+     * @param element screenshot ı alınacak elementin locate verilir
+     */
     public static void webElementScreenShoot(WebElement element){
         String tarih = new SimpleDateFormat("_hh_mm_ss_ddMMyyyy").format(new Date());
         String dosyaYolu = "TestOutput/webElementScreenshot"+tarih+".png";
